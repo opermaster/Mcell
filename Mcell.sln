@@ -5,6 +5,8 @@ VisualStudioVersion = 17.8.34511.84
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MathEvalLogic", "MathEvalLogic\MathEvalLogic.csproj", "{96593936-9A29-4493-8135-8C9A4B07C56B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MathEvalCmd", "MathEvalCmd\MathEvalCmd.csproj", "{A0AB13BB-C878-4341-B39D-7DD57180686C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{96593936-9A29-4493-8135-8C9A4B07C56B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{96593936-9A29-4493-8135-8C9A4B07C56B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{96593936-9A29-4493-8135-8C9A4B07C56B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A0AB13BB-C878-4341-B39D-7DD57180686C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A0AB13BB-C878-4341-B39D-7DD57180686C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A0AB13BB-C878-4341-B39D-7DD57180686C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A0AB13BB-C878-4341-B39D-7DD57180686C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

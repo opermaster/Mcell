@@ -7,6 +7,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MathEvalLogic", "MathEvalLo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MathEvalCmd", "MathEvalCmd\MathEvalCmd.csproj", "{A0AB13BB-C878-4341-B39D-7DD57180686C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MathEvalUi", "MathEvalUi\MathEvalUi.csproj", "{CE403940-7147-4CF9-98DF-D649DE1F72B6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TableIOLogic", "CellIOLogic\TableIOLogic.csproj", "{B590A0AD-3930-4B2E-9FFC-67D114ED06B0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +25,14 @@ Global
 		{A0AB13BB-C878-4341-B39D-7DD57180686C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A0AB13BB-C878-4341-B39D-7DD57180686C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A0AB13BB-C878-4341-B39D-7DD57180686C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CE403940-7147-4CF9-98DF-D649DE1F72B6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CE403940-7147-4CF9-98DF-D649DE1F72B6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CE403940-7147-4CF9-98DF-D649DE1F72B6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CE403940-7147-4CF9-98DF-D649DE1F72B6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B590A0AD-3930-4B2E-9FFC-67D114ED06B0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B590A0AD-3930-4B2E-9FFC-67D114ED06B0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B590A0AD-3930-4B2E-9FFC-67D114ED06B0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B590A0AD-3930-4B2E-9FFC-67D114ED06B0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

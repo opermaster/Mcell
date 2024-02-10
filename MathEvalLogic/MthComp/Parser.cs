@@ -58,7 +58,8 @@ namespace MathEvalLogic.MthComp
                     Next();
                     return new Sqrt(Convert.ToInt32(sqrt_cur.Value));
                 default:
-                    throw new Exception("Failed");
+                    throw new Exception($"Failed: Undefined token `{Current.Value}`");
+                    throw new Exception("Failed"); 
             }
         }
         public void Create() {

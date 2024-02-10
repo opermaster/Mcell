@@ -4,17 +4,16 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{A0AB13BB-C878-4341-B39D-7DD57180686C}</ProjectGuid>
-    <OutputType>Exe</OutputType>
-    <RootNamespace>MathEvalCmd</RootNamespace>
-    <AssemblyName>MathEvalCmd</AssemblyName>
+    <ProjectGuid>{B590A0AD-3930-4B2E-9FFC-67D114ED06B0}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CellIOLogic</RootNamespace>
+    <AssemblyName>CellIOLogic</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -24,7 +23,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -43,17 +41,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Program.cs" />
+    <Compile Include="Class1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\CellIOLogic\TableIOLogic.csproj">
-      <Project>{b590a0ad-3930-4b2e-9ffc-67d114ed06b0}</Project>
-      <Name>TableIOLogic</Name>
-    </ProjectReference>
     <ProjectReference Include="..\MathEvalLogic\MathEvalLogic.csproj">
       <Project>{96593936-9a29-4493-8135-8c9a4b07c56b}</Project>
       <Name>MathEvalLogic</Name>

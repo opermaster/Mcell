@@ -37,7 +37,7 @@ namespace MathEvalLogic.MthComp
                         Next();
                     } while (Pos != n && char.IsDigit(Current));
 
-                    string number = source_code.Substring(start, Pos-start);
+                    string number = source_code.Substring(start, Pos - start);
                     tokens.Add(new Token(TokenType.Num, number));
                 }
                 else if (char.IsLetter(Current)) {
@@ -46,23 +46,25 @@ namespace MathEvalLogic.MthComp
                         Next();
                     } while (Pos != n && char.IsLetter(Current));
 
-                    string word = source_code.Substring(start, Pos-start);
-                    if (key_symb.TryGetValue(word,out var word_token_type)) {
+                    string word = source_code.Substring(start, Pos - start);
+                    if (key_symb.TryGetValue(word, out var word_token_type)) {
                         int start_digit = Pos;
                         do {
                             Next();
                         } while (Pos != n && char.IsDigit(Current));
-                        string number = source_code.Substring(start_digit, Pos-start_digit);
+                        string number = source_code.Substring(start_digit, Pos - start_digit);
                         tokens.Add(new Token(word_token_type, number));
-                    }   
+                    }
+                    else throw new Exception($"Undefined math func: `{word}`");
                 }
-                else if(Current=='+'|| Current == '-'||Current == '*' || Current == '/') {
-                    tokens.Add(new Token(TokenType.Op,Current.ToString()));
+                else if (Current == '+' || Current == '-' || Current == '*' || Current == '/') {
+                    tokens.Add(new Token(TokenType.Op, Current.ToString()));
                     Next();
                 }
                 else if (char.IsWhiteSpace(Current)) {
                     Next();
-                } 
+                }
+                else throw new Exception($"Undefined token: `{Current}`");
             }
             tokens.Add(new Token(TokenType.End, ""));
             return tokens.ToArray();

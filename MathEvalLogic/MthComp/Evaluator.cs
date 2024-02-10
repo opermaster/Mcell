@@ -11,6 +11,7 @@ namespace MathEvalLogic.MthComp
         public readonly BinaryExpr root;
         public Evaluator(BinaryExpr root) {
             this.root = root;
+
         }
         private int EvaluateExpr(BinaryExpr node) {
             int left = 0;

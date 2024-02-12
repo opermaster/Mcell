@@ -1,20 +1,30 @@
 ﻿using MathEvalLogic;
 using System;
 using System.Collections.Generic;
+using System.Runtime.Remoting.Messaging;
 
 namespace TableIOLogic
 {
-    public class TableIO
-    {
+    public class TableIO {
         static private int bounds_s = 'A';
         static private int size = 15;
         static private string[,] table = new string[size, size];
-        static public Dictionary<string[], string> cell_numbers = new Dictionary<string[], string>();
+        static private Dictionary<string[], string> cell_numbers = new Dictionary<string[], string>();
         static private int X;
         static private int Y;
         static private string text;
+
+        public string[,] GetTable() => table;
+        public void ClearTable() {
+            table = new string[size, size];
+            FillTableBase();
+        }
+
+        public TableIO() {
+            FillTableBase();
+        }
         static private void FillTableBase() {
-            table[0, 0] = " ";
+            table[0, 0] = "  ";
 
             for (int i = bounds_s; i < bounds_s + size - 1; i++) {
                 table[i - 64, 0] = ((char)i).ToString();
@@ -117,11 +127,12 @@ namespace TableIOLogic
             else text = "0";
         }
         public static string[,] Main(string[] args) {
-            FillTableBase();
             foreach (string item in args) {
-                ProcessCell(item
-                    .Replace(" ", "")
-                    .ToUpper());
+                if (!(item == "") && !(item == " "))
+                    ProcessCell(item
+                        .Replace(" ", "")
+                        .ToUpper());
+                else continue;
             }
 
             return table;

@@ -1,6 +1,8 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Windows;
-using System.Windows.Controls;
+using MathEvalLogic;
+using TableIOLogic;
 namespace MathEvalUi
 {
     /// <summary>
@@ -8,17 +10,35 @@ namespace MathEvalUi
     /// </summary>
     public partial class MainWindow : Window
     {
+        TableIO Table;
+        private void PrintTable(string[,] table) {
+            Table_view.Text="";
+            for (int i = 0; i < table.GetLength(0); i++) {
+                for (int j = 0; j < table.GetLength(1); j++) {
+                    Table_view.Text+=table[i, j]+"   ";
+                }
+                Table_view.Text +='\n';
+            }
+        }
         public MainWindow() {
             InitializeComponent();
-            //MathEval.Calculate("1+1");
-            Cell_Grid.Columns.Add(new DataGridTextColumn());
-            Cell_Grid.Items.Add(new Line("1"," "," "," "," "));
-            Cell_Grid.Items.Add(new Line("2"," "," "," "," "));
-            Cell_Grid.Items.Add(new Line("3"," "," "," "," "));
-            Cell_Grid.Items.Add(new Line("4"," ", " ", " ", " "));
-            Cell_Grid.Items.Add(new Line("5", " ", " ", " ", " "));
-
+            Table = new TableIO();
+            PrintTable(Table.GetTable());
         }
 
+        private void Calculate_button_Click(object sender, RoutedEventArgs e) {
+            string command_text = Input_commands.Text.Replace(" ", "");
+
+            if (!(command_text == "")) {
+                string[] commands = command_text.Split('\n');
+                PrintTable(TableIO.Main(commands));
+            }
+            else MessageBox.Show("Wrong input!!");
+        }
+
+        private void Clear_button_Click(object sender, RoutedEventArgs e) {
+            Table.ClearTable();
+            PrintTable(Table.GetTable());
+        }
     }
 }

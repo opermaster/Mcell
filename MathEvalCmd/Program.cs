@@ -1,7 +1,7 @@
 ﻿using TableIOLogic;
 using System.IO;
 using System;
-using static System.Net.Mime.MediaTypeNames;
+
 namespace MathEvalCmd
 {
     class Program
@@ -25,6 +25,7 @@ namespace MathEvalCmd
                 "EA-EF:DA*8",
             };
             //commands = File.ReadAllLines(args[0]);
+            TableIO table = new TableIO();
             PrintTable(TableIO.Main(commands));
 
             //foreach(var item in ProcessRange("AA-AC:BA-BB")) Console.WriteLine(item);

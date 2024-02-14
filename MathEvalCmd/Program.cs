@@ -18,11 +18,9 @@ namespace MathEvalCmd
         static void Main(string[] args) {
             string[] commands = new string[] {
                 "AA=2",
-                "BA-BF:AA*1",
-                "CA-CF:AA*2",
-                "DA=5",
-                "FA-FF:DA*5",
-                "EA-EF:DA*8",
+                "BA=5",
+                "CA:AA^BA",
+
             };
             //commands = File.ReadAllLines(args[0]);
             TableIO table = new TableIO();

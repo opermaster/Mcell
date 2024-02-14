@@ -17,7 +17,7 @@ namespace MathEvalLogic.MthComp
 
         public Expr Parse() {
             Expr left = ParseMuiltExpr();
-            while (Current.Value == "+" || Current.Value == "-") {
+            while (Current.Value == "+" || Current.Value == "-" || Current.Value == "^") {
                 string op = Current.Value; Next();
                 Expr right = ParseMuiltExpr();
                 left = new BinaryExpr(left, right, op);

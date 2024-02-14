@@ -57,7 +57,7 @@ namespace MathEvalLogic.MthComp
                     }
                     else throw new Exception($"Undefined math func: `{word}`");
                 }
-                else if (Current == '+' || Current == '-' || Current == '*' || Current == '/') {
+                else if (Current == '+' || Current == '-' || Current == '*' || Current == '/' ||Current =='^') {
                     tokens.Add(new Token(TokenType.Op, Current.ToString()));
                     Next();
                 }

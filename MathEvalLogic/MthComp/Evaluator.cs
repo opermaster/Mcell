@@ -57,6 +57,9 @@ namespace MathEvalLogic.MthComp
                 case "*":
                     left *= right;
                     return left;
+                case "^":
+                    left = Convert.ToInt32(Math.Pow(left,right));
+                    return left;
             }
             return left;
         }

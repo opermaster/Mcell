@@ -5,8 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MathEvalUi"
         mc:Ignorable="d"
-        Title="MCell" Height="550" Width="800">
-    <Grid Margin="20">
+        Title="MCell" Height="700" Width="900" ResizeMode="NoResize">
+    <Grid x:Name="main_grid" Margin="20">
         <Grid.RowDefinitions>
             <RowDefinition></RowDefinition>
             <RowDefinition></RowDefinition>
@@ -16,14 +16,12 @@
             <ColumnDefinition Width="0.8*"></ColumnDefinition>
             <ColumnDefinition Width="0.2*"></ColumnDefinition>
         </Grid.ColumnDefinitions>
-        <TextBlock x:Name="Table_view" 
-                   Grid.Column="0" 
-                   Grid.Row="0"
-                   Grid.RowSpan="3" 
-                   Margin="0 10 10 0"
-                   FontSize="20"
-                   TextAlignment="Left"
-                    ></TextBlock>
+        <WrapPanel  
+            x:Name="wrap_panel"
+            Grid.Column="0" 
+            Grid.Row="0"
+            Grid.RowSpan="3" 
+            Margin="0 10 00 0"></WrapPanel>
         <TextBox x:Name="Input_commands"
                  Grid.Column="1"
                  Grid.Row="0" 
@@ -34,8 +32,8 @@
                  FontSize="20"
                  ></TextBox>
         <StackPanel Grid.Column="1" Grid.Row="2" >
-            <Button x:Name="Calculate_button"  Height="45"  Click="Calculate_button_Click" Margin="10 10 10 0">Calculate</Button>
-            <Button x:Name="Clear_button"  Height="45"  Click="Clear_button_Click" Margin="10 10 10 0">Clear</Button>
+            <Button x:Name="Calculate_button"  Height="45"  Click="Calculate_button_Click" Margin="00 10 00 0">Calculate</Button>
+            <Button x:Name="Clear_button"  Height="45"  Click="Clear_button_Click" Margin="00 10 00 0">Clear</Button>
         </StackPanel>
     </Grid>
 </Window>
